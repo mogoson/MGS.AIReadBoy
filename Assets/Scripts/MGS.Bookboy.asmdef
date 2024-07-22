@@ -1,0 +1,17 @@
+{
+    "name": "MGS.Bookboy",
+    "rootNamespace": "",
+    "references": [
+        "MGS.UGUI",
+        "MGS.WebRequester"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
