@@ -11,6 +11,7 @@
  *************************************************************************/
 
 using MGS.UGUI;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace MGS.Bookboy
@@ -21,20 +22,33 @@ namespace MGS.Bookboy
         public InputField gitRepo;
         public InputField gitToken;
         public InputField qwKey;
-        public Button confirm;
+        public Toggle togAccept;
+        public Button btnLicense;
+        public Button btnConfirm;
 
-        protected override void Awake()
+        [Space]
+        public GameObject license;
+        public Button btnBack;
+        public Button btnAccept;
+
+        protected virtual void Awake()
         {
             gitUser.onValueChanged.AddListener(text => { Data.gitUser = text; CheckInteractable(); });
             gitRepo.onValueChanged.AddListener(text => { Data.gitRepo = text; CheckInteractable(); });
             gitToken.onValueChanged.AddListener(text => { Data.gitToken = text; CheckInteractable(); });
             qwKey.onValueChanged.AddListener(text => { Data.qwKey = text; CheckInteractable(); });
-            confirm.onClick.AddListener(() => { OnChanged(Data); ToggleActive(false); });
+
+            togAccept.onValueChanged.AddListener(accept => CheckInteractable());
+            btnLicense.onClick.AddListener(() => license.gameObject.SetActive(true));
+            btnConfirm.onClick.AddListener(() => { OnChanged(Data); ToggleActive(false); });
+
+            btnBack.onClick.AddListener(() => license.gameObject.SetActive(false));
+            btnAccept.onClick.AddListener(() => { togAccept.isOn = true; license.gameObject.SetActive(false); });
         }
 
         protected void CheckInteractable()
         {
-            confirm.interactable = Data.CheckValid();
+            btnConfirm.interactable = Data.CheckValid() && togAccept.isOn;
         }
 
         protected override void OnRefresh(LoginData data)
@@ -43,6 +57,7 @@ namespace MGS.Bookboy
             gitRepo.text = data.gitRepo;
             gitToken.text = data.gitToken;
             qwKey.text = data.qwKey;
+            togAccept.isOn = false;
             CheckInteractable();
         }
     }

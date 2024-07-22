@@ -38,19 +38,6 @@ namespace MGS.Bookboy
         private void Start()
         {
             CheckLogin();
-
-            var data = login.Load();
-            loadBtn.onClick.AddListener(() =>
-            {
-                writings.Load(data);
-            });
-
-            updateBtn.onClick.AddListener(() =>
-            {
-
-                writings.UpdateAsync(data);
-            });
-
         }
 
         void InitLogicModule()
@@ -85,7 +72,7 @@ namespace MGS.Bookboy
 
         void OnWritingsUpdating(float progress)
         {
-
+            Debug.Log($"progress: {progress}");
         }
 
         void InitUIModule()

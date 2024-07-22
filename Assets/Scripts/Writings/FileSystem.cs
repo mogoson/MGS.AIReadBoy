@@ -35,7 +35,7 @@ namespace MGS.Bookboy
             var paths = Directory.GetFileSystemEntries(path);
             foreach (var item in paths)
             {
-                if (File.Exists(path))
+                if (File.Exists(item))
                 {
                     var entry = new Entry()
                     {
@@ -44,7 +44,7 @@ namespace MGS.Bookboy
                     };
                     entries.Add(entry);
                 }
-                else if (Directory.Exists(path))
+                else if (Directory.Exists(item))
                 {
                     var entry = new Entry()
                     {

@@ -5,6 +5,7 @@
     "com.mgs.ugui": "https://github.com/mogoson/MGS.UGUI.git?path=/Assets",
     "com.mgs.unityhelper": "https://github.com/mogoson/MGS.UnityHelper.git?path=/Assets",
     "com.mgs.webrequester": "https://github.com/mogoson/MGS.WebRequester.git?path=/Assets",
+    "com.mgs.zipper": "file:D:/Programmer/Github/MGS.Zipper/Assets",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.ads": "4.4.2",

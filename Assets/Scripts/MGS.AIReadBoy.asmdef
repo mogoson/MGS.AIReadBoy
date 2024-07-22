@@ -3,7 +3,8 @@
     "rootNamespace": "",
     "references": [
         "MGS.UGUI",
-        "MGS.WebRequester"
+        "MGS.WebRequester",
+        "MGS.Zipper"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

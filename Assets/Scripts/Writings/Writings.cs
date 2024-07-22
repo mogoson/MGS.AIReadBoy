@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MGS.WebRequest;
+using MGS.Zip;
 
 namespace MGS.Bookboy
 {
@@ -96,7 +97,11 @@ namespace MGS.Bookboy
 
         void UnZip(LoginData loginData, Action<string, Exception> onComplete)
         {
-            onComplete?.Invoke(null, null);
+            var file = $"{cache}/{loginData.gitUser}/{loginData.gitRepo}.zip";
+            var dir = $"{cache}/{loginData.gitUser}/{loginData.gitRepo}";
+            var operate = Zipper.Handler.UnzipAsync(file, dir);
+            operate.OnProgress += progress => { OnUpdating?.Invoke(downRatio + progress * (1 - downRatio)); };
+            operate.OnComplete += onComplete;
         }
 
         ICollection<Writing> LoadWritings(LoginData loginData)
@@ -109,27 +114,10 @@ namespace MGS.Bookboy
 
             var writings = new List<Writing>();
             var entries = FileSystem.GetEntries(dir);
-            foreach (var entrie in entries)
+            foreach (var entry in entries)
             {
-                if (!entrie.file)
-                {
-                    var chapters = new List<Chapter>();
-                    foreach (var child in entrie.children)
-                    {
-                        var chapter = new Chapter()
-                        {
-                            Name = Path.GetFileNameWithoutExtension(entrie.path),
-
-                        };
-                        chapters.Add(chapter);
-                    }
-                    var writing = new Writing()
-                    {
-                        name = Path.GetFileNameWithoutExtension(entrie.path),
-                        chapters = chapters,
-                    };
-                    writings.Add(writing);
-                }
+                var ws = LoadWritings(entry.children);
+                writings.AddRange(ws);
             }
             return writings;
         }
