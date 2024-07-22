@@ -14,7 +14,7 @@ using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class GithubCfg
     {

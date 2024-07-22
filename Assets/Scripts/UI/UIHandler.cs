@@ -12,7 +12,7 @@
 
 using MGS.UGUI;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class UIHandler : UIComponent
     {

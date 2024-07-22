@@ -13,7 +13,7 @@
 using System.IO;
 using Newtonsoft.Json;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class Login
     {

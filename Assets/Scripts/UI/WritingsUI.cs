@@ -13,7 +13,7 @@
 using System.Collections.Generic;
 using MGS.UGUI;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class WritingsUI : UIRespondable<ICollection<Writing>, ICollection<Writing>>
     {

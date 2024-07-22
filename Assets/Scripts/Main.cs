@@ -16,7 +16,7 @@ using MGS.UGUI;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class Main : MonoBehaviour
     {

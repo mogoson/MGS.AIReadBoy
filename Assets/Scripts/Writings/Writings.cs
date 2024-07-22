@@ -16,7 +16,7 @@ using System.IO;
 using MGS.WebRequest;
 using MGS.Zip;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class Writings
     {

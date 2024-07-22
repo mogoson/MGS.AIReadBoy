@@ -12,7 +12,7 @@
 
 using System;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     [Serializable]
     public class LoginData

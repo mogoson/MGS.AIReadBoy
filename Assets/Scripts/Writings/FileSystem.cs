@@ -13,7 +13,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class Entry
     {

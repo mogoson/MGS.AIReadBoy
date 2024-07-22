@@ -12,7 +12,7 @@
 
 using System.Collections.Generic;
 
-namespace MGS.Bookboy
+namespace MGS.AIReadBoy
 {
     public class Writing
     {
