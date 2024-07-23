@@ -10,93 +10,30 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using System;
-using System.Collections.Generic;
-using MGS.UGUI;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MGS.AIReadBoy
 {
     public class Main : MonoBehaviour
     {
-        public UIHandler uiHandler;
-        public Button loadBtn;
-        public Button updateBtn;
-
-        Login login;
-        Writings writings;
+        private Login login;
+        private Writings writings;
 
         private void Awake()
-        {
-            InitLogicModule();
-            InitUIModule();
-
-
-        }
-
-        private void Start()
-        {
-            CheckLogin();
-        }
-
-        void InitLogicModule()
         {
             var cache = Application.persistentDataPath;
             login = new Login(cache);
             writings = new Writings(cache);
-            writings.OnUpdating += OnWritingsUpdating;
-            writings.OnUpdated += OnWritingsUpdated; ;
         }
 
-        void OnWritingsUpdated(ICollection<Writing> writings, Exception error)
+        private void Start()
         {
-            if (error == null)
-            {
-                uiHandler.writingsUI.Refresh(writings);
-            }
-            else
-            {
-                Debug.LogError(error);
-                var options = new UIDialogOptions()
-                {
-                    tittle = "Error",
-                    closeButton = true,
-                    content = error.Message,
-                    yesButton = "OK"
-                };
-                uiHandler.uiDialog.Refresh(options);
-                uiHandler.uiDialog.ToggleActive();
-            }
+            login.LogIn(OnLogined);
         }
 
-        void OnWritingsUpdating(float progress)
+        private void OnLogined(LoginData data)
         {
-            Debug.Log($"progress: {progress}");
-        }
-
-        void InitUIModule()
-        {
-            uiHandler.loginUI.OnChangedEvent += OnLoginChanged;
-            uiHandler.writingsUI.OnChangedEvent += OnWritingsChanged;
-        }
-
-        void OnWritingsChanged(ICollection<Writing> writings)
-        {
-
-        }
-
-        void OnLoginChanged(LoginData data)
-        {
-            login.LogIn(data);
-            writings.UpdateAsync(data);
-        }
-
-        void CheckLogin()
-        {
-            var data = login.Load();
-            uiHandler.loginUI.Refresh(data);
-            uiHandler.loginUI.ToggleActive();
+            writings.Refresh(data);
         }
     }
 }

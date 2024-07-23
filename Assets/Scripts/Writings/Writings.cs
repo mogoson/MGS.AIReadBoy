@@ -13,6 +13,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using MGS.UGUI;
 using MGS.WebRequest;
 using MGS.Zip;
 
@@ -20,40 +21,44 @@ namespace MGS.AIReadBoy
 {
     public class Writings
     {
-        public event Action<float> OnUpdating;
-        public event Action<ICollection<Writing>, Exception> OnUpdated;
-
-        string cache;
-        GithubCfg cfg;
-
-        const float downRatio = 0.5f;
-
         public ICollection<Writing> WritingInfos { private set; get; }
+        string cache;
+        LoginData loginData;
+
+        UIDialog dialogUI;
+        WritingsUI writingsUI;
 
         public Writings(string cache)
         {
             this.cache = cache;
-            cfg = GithubConfig.LoadCfg();
+
+            dialogUI = UnityEngine.Object.FindObjectOfType<UIDialog>(true);
+            writingsUI = UnityEngine.Object.FindObjectOfType<WritingsUI>(true);
+            writingsUI.OnClickUserEvent += WritingsUI_OnClickUserEvent;
         }
 
-        public ICollection<Writing> Load(LoginData loginData)
+        private void WritingsUI_OnClickUserEvent()
         {
-            WritingInfos = null;
-            if (loginData != null && loginData.CheckValid())
-            {
-                WritingInfos = LoadWritings(loginData);
-            }
-            return WritingInfos;
+            Update(loginData);
         }
 
-        public void UpdateAsync(LoginData loginData)
+        public void Refresh(LoginData loginData)
         {
-            WritingInfos = null;
+            this.loginData = loginData;
+            WritingInfos = LoadWritings(loginData);
+            writingsUI.Refresh(WritingInfos);
+            writingsUI.Refresh(loginData);
+            writingsUI.ToggleActive();
+        }
+
+        void Update(LoginData loginData)
+        {
             if (loginData == null || !loginData.CheckValid())
             {
                 return;
             }
 
+            OnUpdateStart();
             Download(loginData, OnDowned);
             void OnDowned(string file, Exception error)
             {
@@ -63,35 +68,33 @@ namespace MGS.AIReadBoy
                 }
                 else
                 {
-                    OnUpdated?.Invoke(null, error);
+                    OnUpdateError(error);
                 }
             }
             void OnUnzipd(string dir, Exception error)
             {
                 if (error == null)
                 {
-                    WritingInfos = LoadWritings(loginData);
-                    OnUpdated?.Invoke(WritingInfos, null);
+                    OnUpdateFinished(loginData);
                 }
                 else
                 {
-                    OnUpdated?.Invoke(null, error);
+                    OnUpdateError(error);
                 }
             }
         }
 
         void Download(LoginData loginData, Action<string, Exception> onComplete)
         {
-            var url = string.Format(cfg.api_zipball, loginData.gitUser, loginData.gitRepo);
+            var url = string.Format(GithubKey.API_ZIPBALL, loginData.gitUser, loginData.gitRepo);
             var file = $"{cache}/{loginData.gitUser}/{loginData.gitRepo}.zip";
             var headers = new Dictionary<string, string>()
             {
                 {"Authorization",$"Bearer {loginData.gitToken}"},
-                {Headers.KEY_ACCEPT,cfg.api_accept},
-                {"X-GitHub-Api-Version",cfg.api_version}
+                {Headers.KEY_ACCEPT,GithubKey.API_ACCEPT},
+                {"X-GitHub-Api-Version",GithubKey.API_VERSION}
             };
             var handler = WebRequester.Handler.FileRequest(url, 120, file, headers);
-            handler.OnProgress += progress => { OnUpdating?.Invoke(progress * downRatio); };
             handler.OnComplete += onComplete;
         }
 
@@ -100,8 +103,32 @@ namespace MGS.AIReadBoy
             var file = $"{cache}/{loginData.gitUser}/{loginData.gitRepo}.zip";
             var dir = $"{cache}/{loginData.gitUser}/{loginData.gitRepo}";
             var operate = Zipper.Handler.UnzipAsync(file, dir);
-            operate.OnProgress += progress => { OnUpdating?.Invoke(downRatio + progress * (1 - downRatio)); };
             operate.OnComplete += onComplete;
+        }
+
+        void OnUpdateStart()
+        {
+            writingsUI.ToggleLoading(true);
+        }
+
+        void OnUpdateFinished(LoginData loginData)
+        {
+            writingsUI.ToggleLoading(false);
+            Refresh(loginData);
+        }
+
+        void OnUpdateError(Exception error)
+        {
+            writingsUI.ToggleLoading(false);
+            var options = new UIDialogOptions()
+            {
+                tittle = "Refresh Error",
+                closeButton = true,
+                content = error.Message,
+                yesButton = "OK"
+            };
+            dialogUI.Refresh(options);
+            dialogUI.ToggleActive();
         }
 
         ICollection<Writing> LoadWritings(LoginData loginData)

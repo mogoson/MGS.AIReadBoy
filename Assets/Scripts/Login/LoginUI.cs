@@ -57,7 +57,12 @@ namespace MGS.AIReadBoy
             gitRepo.text = data.gitRepo;
             gitToken.text = data.gitToken;
             qwKey.text = data.qwKey;
-            togAccept.isOn = false;
+            CheckInteractable();
+        }
+
+        public void SetAccept(bool accept)
+        {
+            togAccept.isOn = accept;
             CheckInteractable();
         }
     }

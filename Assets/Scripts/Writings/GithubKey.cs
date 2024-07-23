@@ -1,7 +1,7 @@
 /*************************************************************************
  *  Copyright (C) 2024 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  WritingsUI.cs
+ *  File         :  GithubKey.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -10,16 +10,12 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using System.Collections.Generic;
-using MGS.UGUI;
-
 namespace MGS.AIReadBoy
 {
-    public class WritingsUI : UIRespondable<ICollection<Writing>, ICollection<Writing>>
+    public sealed class GithubKey
     {
-        protected override void OnRefresh(ICollection<Writing> data)
-        {
-
-        }
+        public const string API_ACCEPT = "application/vnd.github+json";
+        public const string API_VERSION = "2022-11-28";
+        public const string API_ZIPBALL = "https://api.github.com/repos/{0}/{1}/zipball";
     }
 }

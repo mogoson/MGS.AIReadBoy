@@ -10,6 +10,7 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
+using System;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -20,26 +21,42 @@ namespace MGS.AIReadBoy
         public LoginData LoginData { private set; get; }
         string loginFile;
 
+        LoginUI LoginUI;
+
+        Action<LoginData> onLogined;
+
         public Login(string cache)
         {
             loginFile = $"{cache}/Login.json";
+            LoginUI = UnityEngine.Object.FindObjectOfType<LoginUI>(true);
+            LoginUI.OnChangedEvent += LoginUI_OnChangedEvent;
         }
 
-        public LoginData Load()
-        {
-            LoginData = LoadLoginData(loginFile);
-            return LoginData;
-        }
-
-        public void LogIn(LoginData data)
+        private void LoginUI_OnChangedEvent(LoginData data)
         {
             LoginData = data;
-            UpdateLoginData(data);
+            UpdateLoginData(LoginData);
+            onLogined?.Invoke(LoginData);
+        }
+
+        public void LogIn(Action<LoginData> onLogined)
+        {
+            LoginData = LoadLoginData(loginFile);
+            if (LoginData.CheckValid())
+            {
+                onLogined?.Invoke(LoginData);
+            }
+            else
+            {
+                this.onLogined = onLogined;
+                LoginUI.Refresh(LoginData);
+                LoginUI.ToggleActive();
+            }
         }
 
         public void LogOut()
         {
-            LoginData = null;
+            LoginData = new LoginData();
         }
 
         LoginData LoadLoginData(string loginFile)
@@ -52,7 +69,7 @@ namespace MGS.AIReadBoy
             return new LoginData();
         }
 
-        public void UpdateLoginData(LoginData data)
+        void UpdateLoginData(LoginData data)
         {
             var json = string.Empty;
             if (data != null)
