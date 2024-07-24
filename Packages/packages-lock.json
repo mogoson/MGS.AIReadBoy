@@ -19,7 +19,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "ecb975c19c17c14959db465bde9f80fdf2ef32da"
+      "hash": "178e9b1a54f79a993bbd00f46334c2bdb44a95c5"
     },
     "com.mgs.unityhelper": {
       "version": "https://github.com/mogoson/MGS.UnityHelper.git?path=/Assets",
@@ -36,10 +36,11 @@
       "hash": "5d72f015007c9d38a694065f7d2fcaf94596df56"
     },
     "com.mgs.zipper": {
-      "version": "file:D:/Programmer/Github/MGS.Zipper/Assets",
+      "version": "https://github.com/mogoson/MGS.Zipper.git?path=/Assets",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "6d503d274b4b10fd176e0dcf204d91dcc6e5be65"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",

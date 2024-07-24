@@ -23,13 +23,15 @@ namespace MGS.AIReadBoy
         public InputField gitToken;
         public InputField qwKey;
         public Toggle togAccept;
-        public Button btnLicense;
+        public Button btnAgreement;
         public Button btnConfirm;
 
         [Space]
-        public GameObject license;
+        public GameObject agreement;
+        public Text txtAgreement;
         public Button btnBack;
         public Button btnAccept;
+        public GameObject loading;
 
         protected virtual void Awake()
         {
@@ -39,11 +41,11 @@ namespace MGS.AIReadBoy
             qwKey.onValueChanged.AddListener(text => { Data.qwKey = text; CheckInteractable(); });
 
             togAccept.onValueChanged.AddListener(accept => CheckInteractable());
-            btnLicense.onClick.AddListener(() => license.gameObject.SetActive(true));
-            btnConfirm.onClick.AddListener(() => { OnChanged(Data); ToggleActive(false); });
+            btnAgreement.onClick.AddListener(() => agreement.gameObject.SetActive(true));
+            btnConfirm.onClick.AddListener(() => OnChanged(Data));
 
-            btnBack.onClick.AddListener(() => license.gameObject.SetActive(false));
-            btnAccept.onClick.AddListener(() => { togAccept.isOn = true; license.gameObject.SetActive(false); });
+            btnBack.onClick.AddListener(() => agreement.gameObject.SetActive(false));
+            btnAccept.onClick.AddListener(() => { togAccept.isOn = true; agreement.gameObject.SetActive(false); });
         }
 
         protected void CheckInteractable()
@@ -60,10 +62,14 @@ namespace MGS.AIReadBoy
             CheckInteractable();
         }
 
-        public void SetAccept(bool accept)
+        public void ToggleLoading(bool isActive)
         {
-            togAccept.isOn = accept;
-            CheckInteractable();
+            loading.SetActive(isActive);
+        }
+
+        public void RefreshAgreement(string agreement)
+        {
+            txtAgreement.text = agreement;
         }
     }
 }

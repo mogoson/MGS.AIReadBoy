@@ -14,7 +14,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MGS.UGUI;
-using MGS.WebRequest;
 using MGS.Zip;
 
 namespace MGS.AIReadBoy
@@ -24,6 +23,7 @@ namespace MGS.AIReadBoy
         public ICollection<Writing> WritingInfos { private set; get; }
         string cache;
         LoginData loginData;
+        GitArchive gitArchive;
 
         UIDialog dialogUI;
         WritingsUI writingsUI;
@@ -31,6 +31,7 @@ namespace MGS.AIReadBoy
         public Writings(string cache)
         {
             this.cache = cache;
+            gitArchive = new GitArchive(cache);
 
             dialogUI = UnityEngine.Object.FindObjectOfType<UIDialog>(true);
             writingsUI = UnityEngine.Object.FindObjectOfType<WritingsUI>(true);
@@ -86,16 +87,7 @@ namespace MGS.AIReadBoy
 
         void Download(LoginData loginData, Action<string, Exception> onComplete)
         {
-            var url = string.Format(GithubKey.API_ZIPBALL, loginData.gitUser, loginData.gitRepo);
-            var file = $"{cache}/{loginData.gitUser}/{loginData.gitRepo}.zip";
-            var headers = new Dictionary<string, string>()
-            {
-                {"Authorization",$"Bearer {loginData.gitToken}"},
-                {Headers.KEY_ACCEPT,GithubKey.API_ACCEPT},
-                {"X-GitHub-Api-Version",GithubKey.API_VERSION}
-            };
-            var handler = WebRequester.Handler.FileRequest(url, 120, file, headers);
-            handler.OnComplete += onComplete;
+            gitArchive.Download(loginData, 120, onComplete);
         }
 
         void UnZip(LoginData loginData, Action<string, Exception> onComplete)

@@ -1,0 +1,5 @@
+{
+	"api_zipball":"https://api.github.com/repos/{0}/{1}/zipball",
+	"api_accept":"application/vnd.github+json",
+	"api_version":"2022-11-28"
+}

@@ -4,7 +4,8 @@
     "references": [
         "MGS.UGUI",
         "MGS.WebRequester",
-        "MGS.Zipper"
+        "MGS.Zipper",
+        "MGS.QianWenHub"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

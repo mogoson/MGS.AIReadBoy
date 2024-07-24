@@ -1,7 +1,7 @@
 /*************************************************************************
  *  Copyright (C) 2024 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  FilledLoading.cs
+ *  File         :  ImageFilling.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -15,10 +15,16 @@ using UnityEngine.UI;
 
 namespace MGS.AIReadBoy
 {
-    public class FilledLoading : MonoBehaviour
+    [RequireComponent(typeof(Image))]
+    public class ImageFilling : MonoBehaviour
     {
-        public Image image;
         public float speed = 1.0f;
+        Image image;
+
+        private void Awake()
+        {
+            image = GetComponent<Image>();
+        }
 
         private void Update()
         {

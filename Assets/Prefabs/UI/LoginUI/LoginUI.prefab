@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -101,7 +101,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5730126240905638454
 CanvasRenderer:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -144,7 +144,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Git Repo
+  m_Text: repo
 --- !u!1 &867373469149323509
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 1339240294575489657}
   - component: {fileID: 5513425692012655881}
   m_Layer: 5
-  m_Name: License
+  m_Name: Agreement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,7 +246,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 680, y: 150}
+  m_SizeDelta: {x: 680, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1199852730005809705
 GameObject:
@@ -287,6 +287,7 @@ RectTransform:
   - {fileID: 1678298913673057730}
   - {fileID: 1339240294575489657}
   - {fileID: 4574086207481758772}
+  - {fileID: 2400433159286440200}
   m_Father: {fileID: 1678298912901778850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -316,14 +317,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -409,7 +410,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 30}
+  m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7687951683566838543
 CanvasRenderer:
@@ -441,12 +442,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 5
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -492,7 +493,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 530, y: 50}
+  m_SizeDelta: {x: 580, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3114124669279232374
 CanvasRenderer:
@@ -634,10 +635,10 @@ RectTransform:
   m_Father: {fileID: 5033467793062414052}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6402381629832704779
 CanvasRenderer:
@@ -667,8 +668,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -793,7 +794,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1678298912392618671
 CanvasRenderer:
@@ -826,7 +827,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -836,7 +837,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Git User
+  m_Text: user
 --- !u!1 &1678298912427531851
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +850,7 @@ GameObject:
   - component: {fileID: 1678298912427531848}
   - component: {fileID: 1678298912427531849}
   m_Layer: 5
-  m_Name: TxtLicense
+  m_Name: TxtAgreement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -872,8 +873,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1085.5, y: -3433.5}
-  m_SizeDelta: {x: 1173, y: 6867}
+  m_AnchoredPosition: {x: 211.50003, y: -2396.5}
+  m_SizeDelta: {x: 423.00006, y: 4793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1678298912427531848
 CanvasRenderer:
@@ -916,153 +917,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "                                 Apache License\r\n                          
-    Version 2.0, January 2004\r\n                        http://www.apache.org/licenses/\r\n\r\n  
-    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\r\n\r\n   1. Definitions.\r\n\r\n     
-    \"License\" shall mean the terms and conditions for use, reproduction,\r\n     
-    and distribution as defined by Sections 1 through 9 of this document.\r\n\r\n     
-    \"Licensor\" shall mean the copyright owner or entity authorized by\r\n     
-    the copyright owner that is granting the License.\r\n\r\n      \"Legal Entity\"
-    shall mean the union of the acting entity and all\r\n      other entities that
-    control, are controlled by, or are under common\r\n      control with that entity.
-    For the purposes of this definition,\r\n      \"control\" means (i) the power,
-    direct or indirect, to cause the\r\n      direction or management of such entity,
-    whether by contract or\r\n      otherwise, or (ii) ownership of fifty percent
-    (50%) or more of the\r\n      outstanding shares, or (iii) beneficial ownership
-    of such entity.\r\n\r\n      \"You\" (or \"Your\") shall mean an individual or
-    Legal Entity\r\n      exercising permissions granted by this License.\r\n\r\n     
-    \"Source\" form shall mean the preferred form for making modifications,\r\n     
-    including but not limited to software source code, documentation\r\n      source,
-    and configuration files.\r\n\r\n      \"Object\" form shall mean any form resulting
-    from mechanical\r\n      transformation or translation of a Source form, including
-    but\r\n      not limited to compiled object code, generated documentation,\r\n     
-    and conversions to other media types.\r\n\r\n      \"Work\" shall mean the work
-    of authorship, whether in Source or\r\n      Object form, made available under
-    the License, as indicated by a\r\n      copyright notice that is included in
-    or attached to the work\r\n      (an example is provided in the Appendix below).\r\n\r\n     
-    \"Derivative Works\" shall mean any work, whether in Source or Object\r\n     
-    form, that is based on (or derived from) the Work and for which the\r\n     
-    editorial revisions, annotations, elaborations, or other modifications\r\n     
-    represent, as a whole, an original work of authorship. For the purposes\r\n     
-    of this License, Derivative Works shall not include works that remain\r\n     
-    separable from, or merely link (or bind by name) to the interfaces of,\r\n     
-    the Work and Derivative Works thereof.\r\n\r\n      \"Contribution\" shall mean
-    any work of authorship, including\r\n      the original version of the Work and
-    any modifications or additions\r\n      to that Work or Derivative Works thereof,
-    that is intentionally\r\n      submitted to Licensor for inclusion in the Work
-    by the copyright owner\r\n      or by an individual or Legal Entity authorized
-    to submit on behalf of\r\n      the copyright owner. For the purposes of this
-    definition, \"submitted\"\r\n      means any form of electronic, verbal, or written
-    communication sent\r\n      to the Licensor or its representatives, including
-    but not limited to\r\n      communication on electronic mailing lists, source
-    code control systems,\r\n      and issue tracking systems that are managed by,
-    or on behalf of, the\r\n      Licensor for the purpose of discussing and improving
-    the Work, but\r\n      excluding communication that is conspicuously marked or
-    otherwise\r\n      designated in writing by the copyright owner as \"Not a Contribution.\"\r\n\r\n     
-    \"Contributor\" shall mean Licensor and any individual or Legal Entity\r\n     
-    on behalf of whom a Contribution has been received by Licensor and\r\n      subsequently
-    incorporated within the Work.\r\n\r\n   2. Grant of Copyright License. Subject
-    to the terms and conditions of\r\n      this License, each Contributor hereby
-    grants to You a perpetual,\r\n      worldwide, non-exclusive, no-charge, royalty-free,
-    irrevocable\r\n      copyright license to reproduce, prepare Derivative Works
-    of,\r\n      publicly display, publicly perform, sublicense, and distribute the\r\n     
-    Work and such Derivative Works in Source or Object form.\r\n\r\n   3. Grant of
-    Patent License. Subject to the terms and conditions of\r\n      this License,
-    each Contributor hereby grants to You a perpetual,\r\n      worldwide, non-exclusive,
-    no-charge, royalty-free, irrevocable\r\n      (except as stated in this section)
-    patent license to make, have made,\r\n      use, offer to sell, sell, import,
-    and otherwise transfer the Work,\r\n      where such license applies only to
-    those patent claims licensable\r\n      by such Contributor that are necessarily
-    infringed by their\r\n      Contribution(s) alone or by combination of their
-    Contribution(s)\r\n      with the Work to which such Contribution(s) was submitted.
-    If You\r\n      institute patent litigation against any entity (including a\r\n     
-    cross-claim or counterclaim in a lawsuit) alleging that the Work\r\n      or
-    a Contribution incorporated within the Work constitutes direct\r\n      or contributory
-    patent infringement, then any patent licenses\r\n      granted to You under this
-    License for that Work shall terminate\r\n      as of the date such litigation
-    is filed.\r\n\r\n   4. Redistribution. You may reproduce and distribute copies
-    of the\r\n      Work or Derivative Works thereof in any medium, with or without\r\n     
-    modifications, and in Source or Object form, provided that You\r\n      meet
-    the following conditions:\r\n\r\n      (a) You must give any other recipients
-    of the Work or\r\n          Derivative Works a copy of this License; and\r\n\r\n     
-    (b) You must cause any modified files to carry prominent notices\r\n         
-    stating that You changed the files; and\r\n\r\n      (c) You must retain, in
-    the Source form of any Derivative Works\r\n          that You distribute, all
-    copyright, patent, trademark, and\r\n          attribution notices from the Source
-    form of the Work,\r\n          excluding those notices that do not pertain to
-    any part of\r\n          the Derivative Works; and\r\n\r\n      (d) If the Work
-    includes a \"NOTICE\" text file as part of its\r\n          distribution, then
-    any Derivative Works that You distribute must\r\n          include a readable
-    copy of the attribution notices contained\r\n          within such NOTICE file,
-    excluding those notices that do not\r\n          pertain to any part of the Derivative
-    Works, in at least one\r\n          of the following places: within a NOTICE
-    text file distributed\r\n          as part of the Derivative Works; within the
-    Source form or\r\n          documentation, if provided along with the Derivative
-    Works; or,\r\n          within a display generated by the Derivative Works, if
-    and\r\n          wherever such third-party notices normally appear. The contents\r\n         
-    of the NOTICE file are for informational purposes only and\r\n          do not
-    modify the License. You may add Your own attribution\r\n          notices within
-    Derivative Works that You distribute, alongside\r\n          or as an addendum
-    to the NOTICE text from the Work, provided\r\n          that such additional
-    attribution notices cannot be construed\r\n          as modifying the License.\r\n\r\n     
-    You may add Your own copyright statement to Your modifications and\r\n      may
-    provide additional or different license terms and conditions\r\n      for use,
-    reproduction, or distribution of Your modifications, or\r\n      for any such
-    Derivative Works as a whole, provided Your use,\r\n      reproduction, and distribution
-    of the Work otherwise complies with\r\n      the conditions stated in this License.\r\n\r\n  
-    5. Submission of Contributions. Unless You explicitly state otherwise,\r\n     
-    any Contribution intentionally submitted for inclusion in the Work\r\n      by
-    You to the Licensor shall be under the terms and conditions of\r\n      this
-    License, without any additional terms or conditions.\r\n      Notwithstanding
-    the above, nothing herein shall supersede or modify\r\n      the terms of any
-    separate license agreement you may have executed\r\n      with Licensor regarding
-    such Contributions.\r\n\r\n   6. Trademarks. This License does not grant permission
-    to use the trade\r\n      names, trademarks, service marks, or product names
-    of the Licensor,\r\n      except as required for reasonable and customary use
-    in describing the\r\n      origin of the Work and reproducing the content of
-    the NOTICE file.\r\n\r\n   7. Disclaimer of Warranty. Unless required by applicable
-    law or\r\n      agreed to in writing, Licensor provides the Work (and each\r\n     
-    Contributor provides its Contributions) on an \"AS IS\" BASIS,\r\n      WITHOUT
-    WARRANTIES OR CONDITIONS OF ANY KIND, either express or\r\n      implied, including,
-    without limitation, any warranties or conditions\r\n      of TITLE, NON-INFRINGEMENT,
-    MERCHANTABILITY, or FITNESS FOR A\r\n      PARTICULAR PURPOSE. You are solely
-    responsible for determining the\r\n      appropriateness of using or redistributing
-    the Work and assume any\r\n      risks associated with Your exercise of permissions
-    under this License.\r\n\r\n   8. Limitation of Liability. In no event and under
-    no legal theory,\r\n      whether in tort (including negligence), contract, or
-    otherwise,\r\n      unless required by applicable law (such as deliberate and
-    grossly\r\n      negligent acts) or agreed to in writing, shall any Contributor
-    be\r\n      liable to You for damages, including any direct, indirect, special,\r\n     
-    incidental, or consequential damages of any character arising as a\r\n      result
-    of this License or out of the use or inability to use the\r\n      Work (including
-    but not limited to damages for loss of goodwill,\r\n      work stoppage, computer
-    failure or malfunction, or any and all\r\n      other commercial damages or losses),
-    even if such Contributor\r\n      has been advised of the possibility of such
-    damages.\r\n\r\n   9. Accepting Warranty or Additional Liability. While redistributing\r\n     
-    the Work or Derivative Works thereof, You may choose to offer,\r\n      and charge
-    a fee for, acceptance of support, warranty, indemnity,\r\n      or other liability
-    obligations and/or rights consistent with this\r\n      License. However, in
-    accepting such obligations, You may act only\r\n      on Your own behalf and
-    on Your sole responsibility, not on behalf\r\n      of any other Contributor,
-    and only if You agree to indemnify,\r\n      defend, and hold each Contributor
-    harmless for any liability\r\n      incurred by, or claims asserted against,
-    such Contributor by reason\r\n      of your accepting any such warranty or additional
-    liability.\r\n\r\n   END OF TERMS AND CONDITIONS\r\n\r\n   APPENDIX: How to apply
-    the Apache License to your work.\r\n\r\n      To apply the Apache License to
-    your work, attach the following\r\n      boilerplate notice, with the fields
-    enclosed by brackets \"[]\"\r\n      replaced with your own identifying information.
-    (Don't include\r\n      the brackets!)  The text should be enclosed in the appropriate\r\n     
-    comment syntax for the file format. We also recommend that a\r\n      file or
-    class name and description of purpose be included on the\r\n      same \"printed
-    page\" as the copyright notice for easier\r\n      identification within third-party
-    archives.\r\n\r\n   Copyright [yyyy] [name of copyright owner]\r\n\r\n   Licensed
-    under the Apache License, Version 2.0 (the \"License\");\r\n   you may not use
-    this file except in compliance with the License.\r\n   You may obtain a copy
-    of the License at\r\n\r\n       http://www.apache.org/licenses/LICENSE-2.0\r\n\r\n  
-    Unless required by applicable law or agreed to in writing, software\r\n   distributed
-    under the License is distributed on an \"AS IS\" BASIS,\r\n   WITHOUT WARRANTIES
-    OR CONDITIONS OF ANY KIND, either express or implied.\r\n   See the License for
-    the specific language governing permissions and\r\n   limitations under the License.\r\n"
+  m_Text: Application User Agreement
 --- !u!1 &1678298912620132844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +974,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -1161,7 +1016,7 @@ RectTransform:
   m_Father: {fileID: 1678298913823156382}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.80490977}
+  m_AnchorMin: {x: 0, y: 0.9661685}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1187,7 +1042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34509805, g: 0.34509805, b: 0.34509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1213,8 +1068,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678298912901778850}
-  - component: {fileID: 1888234776390332589}
-  - component: {fileID: 2352479411746375331}
+  - component: {fileID: 6518827061376843513}
+  - component: {fileID: 2770946453421354611}
   - component: {fileID: 1678298912901778849}
   m_Layer: 5
   m_Name: LoginUI
@@ -1245,7 +1100,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1888234776390332589
+--- !u!222 &6518827061376843513
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1253,7 +1108,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678298912901778851}
   m_CullTransparentMesh: 1
---- !u!114 &2352479411746375331
+--- !u!114 &2770946453421354611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1266,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.9019608}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1300,11 +1155,13 @@ MonoBehaviour:
   gitToken: {fileID: 3107462824509808212}
   qwKey: {fileID: 1678298913154206393}
   togAccept: {fileID: 5040909005199598170}
-  btnLicense: {fileID: 8005050182670297787}
+  btnAgreement: {fileID: 8005050182670297787}
   btnConfirm: {fileID: 1320980232700197341}
-  license: {fileID: 1678298913699127288}
+  agreement: {fileID: 1678298913699127288}
+  txtAgreement: {fileID: 1678298912427531849}
   btnBack: {fileID: 5827820761185994006}
   btnAccept: {fileID: 7797605092536813626}
+  loading: {fileID: 9080389344150870783}
 --- !u!1 &1678298912922477596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1281,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 530, y: 50}
+  m_SizeDelta: {x: 580, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1678298913005098008
 CanvasRenderer:
@@ -1571,7 +1428,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 530, y: 50}
+  m_SizeDelta: {x: 580, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1678298913154206279
 CanvasRenderer:
@@ -1747,14 +1604,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1678298912427531850}
-  - {fileID: 4358454896243656858}
   m_Father: {fileID: 1678298914331098733}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 6925}
+  m_SizeDelta: {x: 0, y: 4818}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1678298913404623574
 MonoBehaviour:
@@ -1772,7 +1628,7 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 25
+    m_Bottom: 50
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -1962,7 +1818,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -1983,7 +1839,7 @@ GameObject:
   - component: {fileID: 3923016793848717309}
   - component: {fileID: 1055228295548457412}
   m_Layer: 5
-  m_Name: License
+  m_Name: Agreement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2002,8 +1858,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1678298913613832551}
-  - {fileID: 7837875604549076418}
-  - {fileID: 4018371365801083925}
+  - {fileID: 1782463070422753607}
   m_Father: {fileID: 1678298912901778850}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2111,7 +1966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4566037, g: 0.4566037, b: 0.4566037, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2172,7 +2027,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1678298912657756845}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.19509023
+  m_Size: 0.033831466
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2353,7 +2208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34509805, g: 0.34509805, b: 0.34509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2431,7 +2286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4566037, g: 0.4566037, b: 0.4566037, a: 1}
+  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2613,7 +2468,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1678298914313746580
 CanvasRenderer:
@@ -2646,7 +2501,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -2656,7 +2511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: App Key
+  m_Text: key
 --- !u!1 &1678298914331098734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,7 +2639,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5809086153357446869
 CanvasRenderer:
@@ -2817,7 +2672,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -2827,7 +2682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Git Token
+  m_Text: token
 --- !u!1 &1995392263703000055
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2694,7 @@ GameObject:
   - component: {fileID: 5033467793062414052}
   - component: {fileID: 5040909005199598170}
   m_Layer: 5
-  m_Name: TogLicense
+  m_Name: TogAgreement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2864,7 +2719,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5040909005199598170
 MonoBehaviour:
@@ -2973,7 +2828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2993,87 +2848,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Confirm
---- !u!1 &2537699117658628936
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4358454896243656858}
-  - component: {fileID: 4925227979380525921}
-  - component: {fileID: 4913619210972810086}
-  m_Layer: 5
-  m_Name: Text (Legacy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4358454896243656858
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537699117658628936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1678298913404623568}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1085.5, y: -6900}
-  m_SizeDelta: {x: 655, y: 33}
-  m_Pivot: {x: 0.5, y: 0}
---- !u!222 &4925227979380525921
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537699117658628936}
-  m_CullTransparentMesh: 1
---- !u!114 &4913619210972810086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537699117658628936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Copyright (C) 2024 Mogoson. All rights reserved.
+  m_Text: Login
 --- !u!1 &2737416711409390664
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,7 +2861,7 @@ GameObject:
   - component: {fileID: 6798338537816827302}
   - component: {fileID: 8005050182670297787}
   m_Layer: 5
-  m_Name: BtnLicense
+  m_Name: BtnAgreement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3111,7 +2886,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 30}
+  m_SizeDelta: {x: 125, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6798338537816827302
 CanvasRenderer:
@@ -3297,7 +3072,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -3492,20 +3267,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4254120115255782298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3510227503618959077}
-  m_Father: {fileID: 1678298913699127295}
-  m_RootOrder: 1
+  m_Father: {fileID: 1782463070422753607}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -160, y: 120}
-  m_SizeDelta: {x: 160, y: 35}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -240, y: 0}
+  m_SizeDelta: {x: 120, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1882213926954693371
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3527,7 +3302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3649,7 +3424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3769,7 +3544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3816,20 +3591,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5040211355821888673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6741672263050284326}
-  m_Father: {fileID: 1678298913699127295}
-  m_RootOrder: 2
+  m_Father: {fileID: 1782463070422753607}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 160, y: 120}
-  m_SizeDelta: {x: 160, y: 35}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 240, y: 0}
+  m_SizeDelta: {x: 120, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5945216829278415065
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3851,7 +3626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3951,7 +3726,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 530, y: 50}
+  m_SizeDelta: {x: 580, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2487488283780949411
 CanvasRenderer:
@@ -4219,6 +3994,44 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Enter text...
+--- !u!1 &6804252296067910094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1782463070422753607}
+  m_Layer: 5
+  m_Name: ToolBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1782463070422753607
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804252296067910094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7837875604549076418}
+  - {fileID: 4018371365801083925}
+  m_Father: {fileID: 1678298913699127295}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: -200, y: 100}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &6875045328748376542
 GameObject:
   m_ObjectHideFlags: 0
@@ -4278,7 +4091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4358,7 +4171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4367,18 +4180,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 3
+    m_FontSize: 35
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "AI\u4E66\u7AE5"
+  m_Text: AI Read Boy
 --- !u!1 &7318369515487342286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4416,7 +4229,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 220, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4338667471826799954
 CanvasRenderer:
@@ -4439,15 +4252,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4588,15 +4401,203 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: license
+  m_Text: agreement
+--- !u!1 &8848701602391566588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3190219703604704002}
+  - component: {fileID: 7000764865192812317}
+  - component: {fileID: 2514080010943589966}
+  - component: {fileID: 4151176376948580908}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3190219703604704002
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848701602391566588}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2400433159286440200}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7000764865192812317
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848701602391566588}
+  m_CullTransparentMesh: 1
+--- !u!114 &2514080010943589966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848701602391566588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4151176376948580908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848701602391566588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2449911cec38b4542b740582048d9126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!1 &9080389344150870783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2400433159286440200}
+  - component: {fileID: 6387097956022493961}
+  - component: {fileID: 1099153299647145211}
+  - component: {fileID: 2194169924216053652}
+  m_Layer: 5
+  m_Name: Loading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2400433159286440200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080389344150870783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3190219703604704002}
+  m_Father: {fileID: 7420023275070440220}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6387097956022493961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080389344150870783}
+  m_CullTransparentMesh: 1
+--- !u!114 &1099153299647145211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080389344150870783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.5019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2194169924216053652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080389344150870783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1

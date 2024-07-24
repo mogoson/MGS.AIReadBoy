@@ -13,6 +13,7 @@
 using System;
 using System.Collections.Generic;
 using MGS.UGUI;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace MGS.AIReadBoy
@@ -24,7 +25,7 @@ namespace MGS.AIReadBoy
         public Button btnUser;
         public Text txtUser;
         public UIButtonCollector collector;
-        public FilledLoading loading;
+        public GameObject loading;
 
         protected ICollection<Writing> data;
 
@@ -75,7 +76,7 @@ namespace MGS.AIReadBoy
 
         public void ToggleLoading(bool isActive)
         {
-            loading.gameObject.SetActive(isActive);
+            loading.SetActive(isActive);
         }
     }
 }
